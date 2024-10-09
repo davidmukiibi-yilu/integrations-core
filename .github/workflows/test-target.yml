@@ -380,7 +380,7 @@ jobs:
       with:
         name: "${{ inputs.traces-artifact-name }}-${{ inputs.target }}-${{ inputs.platform }}"
         path: "${{ env.TRACE_CAPTURE_FILE }}"
-        include-hidden-files: true
+        # include-hidden-files: true
 
     - name: Finalize test results
       if: always()
@@ -396,7 +396,7 @@ jobs:
       with:
         name: "test-results-${{ inputs.target }}-${{ inputs.platform }}"
         path: "${{ env.TEST_RESULTS_BASE_DIR }}"
-        include-hidden-files: true
+        # include-hidden-files: true
 
     - name: Upload coverage data
       if: >
