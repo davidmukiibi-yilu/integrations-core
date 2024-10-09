@@ -54,13 +54,13 @@ on:
         default: ""
 
 jobs:
-  jd316aba:
+  jc6b16d4:
     uses: ./.github/workflows/test-target.yml
     with:
-      job-name: ddev on Linux
-      target: ddev
-      platform: linux
-      runner: '["ubuntu-22.04"]'
+      job-name: .NET CLR
+      target: dotnetclr
+      platform: windows
+      runner: '["windows-2022"]'
       repo: "${{ inputs.repo }}"
       python-version: "${{ inputs.python-version }}"
       standard: ${{ inputs.standard }}
